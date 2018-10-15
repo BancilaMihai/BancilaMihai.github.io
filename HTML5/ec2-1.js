@@ -3,7 +3,7 @@ function citire(){
 	var _a=document.getElementById("id_a").value;
 	var _b=document.getElementById("id_b").value;
 	var _c=document.getElementById("id_c").value;
-	var coeficineti={a:_a, b:_b, c:_c}
+	var coeficineti={a:_a, b:_b, c:_c};
 	return coeficineti;
 }
 function rezolvare(coeficineti){
