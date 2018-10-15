@@ -16,7 +16,7 @@ function rezolvare(coeficineti){
 	}else{
 		x1_re=-coeficineti.b/(2*coeficineti.a);
 		x1_im=Math.sqrt(-delta)/(2*coeficineti.a);
-		x2_re=-coeficinetib/(2*coeficineti.a);
+		x2_re=-coeficineti.b/(2*coeficineti.a);
 		x2_im=-Math.sqrt(-delta)/(2*coeficineti.a);
 	}
 
@@ -26,8 +26,8 @@ function rezolvare(coeficineti){
 	return ;
 }
 function afisare(solutii){
-	document.getElementById("id_x1").innerHTML=solutii.x1_re+" + "+solutii.x1_im+"i";
-	document.getElementById("id_x2").innerHTML=solutii.x2_re+" + "+solutii.x2_im+"i";
+	document.getElementById("id_x1").innerHTML=solutii.x1.re+" + "+solutii.x1.im+"i";
+	document.getElementById("id_x2").innerHTML=solutii.x2.re+" + "+solutii.x2.im+"i";
 }
 function rezolva(){
 	var coeficineti=citire();
