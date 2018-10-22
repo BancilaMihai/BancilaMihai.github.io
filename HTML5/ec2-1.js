@@ -23,7 +23,7 @@ function rezolvare(coeficineti){
 	var x1={re:x1_re, im:x1_im};
 	var x2={re:x2_re, im:x2_im};
 	var solutii={x1:x1, x2:x2};
-	return ;
+	return solutii;
 }
 function afisare(solutii){
 	document.getElementById("id_x1").innerHTML=solutii.x1.re+" + "+solutii.x1.im+"i";
