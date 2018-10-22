@@ -1,6 +1,6 @@
 document.getElementById("id_bussiness_version").innerHTML="Bussiness version: 2018.10.22.0";
 document.getElementById("id_button").addEventListener("click",rezolva);
-function e_ec2()
+function t_ec2()
 {
 	this.citire=function(){
 		this.a=document.getElementById("id_a").value;
