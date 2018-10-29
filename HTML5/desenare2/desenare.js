@@ -1,4 +1,4 @@
-document.getElementById("id_bussiness_version").innerHTML="Bussiness version: 2018.10.29.2";
+document.getElementById("id_bussiness_version").innerHTML="Bussiness version: 2018.10.29.4";
 document.getElementById("id_start_button").addEventListener("click",start); //eveniment
 document.getElementById("id_stop_button").addEventListener("click",stop);
 
@@ -6,7 +6,7 @@ document.getElementById("id_start_button").disabled=false;
 document.getElementById("id_stop_button").disabled=true;
 
 var unghi_start={unghi:0}; //in grade {unghi primeste val 0}-creare obiect //global
-
+var my_worker=null;
 function deseneaza_cerc(unghi,context,w,h){
 	context.clearRect(0,0,w,h);
 	context.beginPath();
@@ -26,10 +26,13 @@ function start(){
 	document.getElementById("id_stop_button").disabled=false;
 
 	//buton desible ... pt a nu se crea mai multe timere
-
-	my_worker=new Worker("calcul_prime.js"); //my_worker global --- var my_worker local
-	my_worker.onmessage=function(e){
-		document.getElementById("id_prime").innerHTML=e.data;
+	if(my_worker==null){
+		my_worker=new Worker("calcul_prime.js"); //my_worker global --- var my_worker local
+		my_worker.onmessage=function(e){
+			document.getElementById("id_prime").innerHTML=e.data;
+		}
+	}else{
+		my_worker.postMessage("start");
 	}
 	
 	//var intervalID = scope.setInterval(func, delay[, param1, param2, ...]);

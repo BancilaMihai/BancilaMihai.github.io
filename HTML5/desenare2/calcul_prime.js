@@ -3,6 +3,10 @@ var stopped=false;
 onmessage=function(e){
 	if(e.data=="stop"){
 		stopped=true;
+	}else{
+		if(e.data=="start"){
+		stopped=false;
+	}
 	}
 }
 function is_prim(n){
@@ -13,7 +17,7 @@ function is_prim(n){
 	return true;
 }
 function calculeaza_prime(start_value){
-	//bancila
+//bancila
 //for(var i=1e9; i<1e10;i++)//1e9=un miliard 1e10=10 miliarde
 //	if(is_prim(i))
 //		postMessage(i);
@@ -21,7 +25,7 @@ function calculeaza_prime(start_value){
 //postMessage("gata");
 
 if(stopped)
-	;
+	;//daca stop ii adevarat nu face nimic
 else{
 	for(var i=start_value; i<start_value+1000;i++)//1e9=un miliard 1e10=10 miliarde
 		if(is_prim(i))
