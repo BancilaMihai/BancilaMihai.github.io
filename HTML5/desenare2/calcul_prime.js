@@ -13,6 +13,7 @@ function is_prim(n){
 	return true;
 }
 function calculeaza_prime(start_value){
+	//bancila
 //for(var i=1e9; i<1e10;i++)//1e9=un miliard 1e10=10 miliarde
 //	if(is_prim(i))
 //		postMessage(i);
