@@ -27,6 +27,11 @@ function start(){
 
 	//buton desible ... pt a nu se crea mai multe timere
 	document.getElementById("id_start_button").disabled=true;
+
+	var my_worker=new Worker("calcul_prime.js");
+	my_worker.onmessage=function(e){
+		document.getElementById("id_prime").innerHTML=e.data;
+	}
 	
 	//var intervalID = scope.setInterval(func, delay[, param1, param2, ...]);
 	id_timer=setInterval(deseneaza_cerc,10,unghi_start,context,canvas.width,canvas.height);
