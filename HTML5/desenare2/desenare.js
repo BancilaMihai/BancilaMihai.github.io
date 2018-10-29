@@ -33,6 +33,7 @@ function start(){
 	}
 	
 	//var intervalID = scope.setInterval(func, delay[, param1, param2, ...]);
+	//bancila
 	id_timer=setInterval(deseneaza_cerc,10,unghi_start,context,canvas.width,canvas.height);
 	//daca era _ era local :_id_timer (asa e global)
 	
