@@ -23,6 +23,7 @@ function t_ec2()
 
 		this.x1={re:x1_re, im:x1_im};
 		this.x2={re:x2_re, im:x2_im};
+		//bancila
 	}
 	this.afisare=function (){
 		document.getElementById("id_x1").innerHTML=this.x1.re+" + "+this.x1.im+"i";

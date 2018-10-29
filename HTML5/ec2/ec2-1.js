@@ -13,6 +13,7 @@ function rezolvare(coeficineti){
 		x1_re=(-coeficineti.b+Math.sqrt(delta))/(2*coeficineti.a);
 		x2_re=(-coeficineti.b-Math.sqrt(delta))/(2*coeficineti.a);
 		x1_im=x2_im=0;
+		//bancila
 	}else{
 		x1_re=-coeficineti.b/(2*coeficineti.a);
 		x1_im=Math.sqrt(-delta)/(2*coeficineti.a);

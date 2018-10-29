@@ -20,8 +20,8 @@ function deseneaza_cerc(unghi,context,w,h){
 function start(){
 	var canvas=document.getElementById("id_canvas");
 	var context=canvas.getContext("2d");
+	//bancila
 	
-
 	document.getElementById("id_start_button").disabled=true;
 	document.getElementById("id_stop_button").disabled=false;
 
