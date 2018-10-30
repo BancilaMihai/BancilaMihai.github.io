@@ -16,6 +16,7 @@ function on_device_orientation(e){
 				canvas.height/2+e.beta/90*(canvas.height/2-R),
 				R,0,2*Math.PI);
 	context.stroke();
+	context.clearRect();
 
 
 }
