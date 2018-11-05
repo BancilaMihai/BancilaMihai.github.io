@@ -18,11 +18,11 @@ function on_device_orientation(e){
 	context.stroke();
 }
 function on_device_motion(e){
-	document.getElementById("id_acc_z").innerHTML=e.accelerationIncludingGravity.z; //o structura care contine x/y/z
-	document.getElementById("id_acc_x").innerHTML=e.accelerationIncludingGravity.x;
-	document.getElementById("id_acc_y").innerHTML=e.accelerationIncludingGravity.y;
+	var acc_z=e.accelerationIncludingGravity.z; //o structura care contine x/y/z
+	var acc_x=e.accelerationIncludingGravity.x;
+	var acc_y=e.accelerationIncludingGravity.y;
 
-	document.getElementById("id_acc_z").innerHTML=Math.round(id_acc_z*100)/100;
-	document.getElementById("id_acc_x").innerHTML=Math.round(id_acc_x*100)/100;
-	document.getElementById("id_acc_y").innerHTML=Math.round(id_acc_y*100)/100;
+	document.getElementById("id_acc_z").innerHTML=Math.round(acc_z*100)/100;
+	document.getElementById("id_acc_x").innerHTML=Math.round(acc_x*100)/100;
+	document.getElementById("id_acc_y").innerHTML=Math.round(acc_y*100)/100;
 }
