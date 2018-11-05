@@ -16,13 +16,14 @@ function on_device_orientation(e){
 				canvas.height/2+e.beta/90*(canvas.height/2-R),
 				R,0,2*Math.PI);
 	context.stroke();
+	
 }
 function on_device_motion(e){
-	var acc_z=e.accelerationIncludingGravity.z; //o structura care contine x/y/z
-	var acc_x=e.accelerationIncludingGravity.x;
-	var acc_y=e.accelerationIncludingGravity.y;
-
-	document.getElementById("id_acc_z").innerHTML=Math.round(acc_z*100)/100;
-	document.getElementById("id_acc_x").innerHTML=Math.round(acc_x*100)/100;
-	document.getElementById("id_acc_y").innerHTML=Math.round(acc_y*100)/100;
+	var acc_z = e.accelerationIncludingGravity.z;
+	var acc_x = e.accelerationIncludingGravity.x;
+	var acc_y = e.accelerationIncludingGravity.y;
+	
+	document.getElementById("id_acc_z").innerHTML = Math.round(acc_z * 100) / 100;
+	document.getElementById("id_acc_x").innerHTML = Math.round(acc_x * 100) / 100;
+	document.getElementById("id_acc_y").innerHTML = Math.round(acc_y * 100) / 100;
 }
