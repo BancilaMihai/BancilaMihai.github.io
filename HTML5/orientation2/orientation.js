@@ -1,5 +1,6 @@
-document.getElementById("id_logic_version").innerHTML="Logic version: 2018.11.05.3";
-window.addEventListener("devicemotion",on_device_motion)
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.11.05.3";
+window.addEventListener("deviceorientation", on_device_orientation);
+window.addEventListener("devicemotion", on_device_motion);
 
 function on_device_orientation(e){
 	document.getElementById("id_alpha").innerHTML=e.alpha;
