@@ -1,0 +1,71 @@
+import Foundation
+
+func citeste()->(Float,Float,Float){ //returnam o tupla (care contine 3 valori -ex:tripla)
+//vechi     a: inout Float-referinta-valorile modif se transmit in afara, a:Float -asa nu era bine, era prin copiere
+    print("a= ")
+    let s_opt=readLine()
+    if let s=s_opt{
+        let a_opt=Float(s)
+        if let _a=a_opt{
+        //il am pe a
+            print("b= ")
+            let s_opt=readLine()
+            if let s=s_opt{
+                let a_opt=Float(s)
+                if let _b=a_opt{
+                //il am pe b
+                    print("c= ")
+                    let s_opt=readLine()
+                    if let s=s_opt{
+                        let a_opt=Float(s)
+                        if let _c=a_opt{
+                            //il am pe c
+                            return(_a,_b,_c)//am returnat o tupla
+                        }else{
+                        return(1,2,1)
+                        }
+                    }else{
+                    return(1,2,1)
+                    }
+                }else{
+                return(1,2,1)
+                }
+            }else{
+            return(1,2,1)
+            }
+        }else{
+        return(1,2,1)
+        }
+    }else{
+    return(1,2,1)
+    }
+}
+func calculeaza(coef:(a:Float,b:Float,c:Float))->((Float,Float),(Float,Float)){
+    print("a=\(a),b=\(b),c=\(c)")
+    let delta=coef.b*coef.b-4*coef.a*coef.c
+    if delta>=0{
+        let x1_re=(-coef.b-sqrt(delta))/(2*coef.a)
+        let x2_re=(-coef.b+sqrt(delta))/(2*coef.a)
+        let x1_im=Float(0.0)
+        let x2_im=Float(0,0)
+        return((x1_re,x1_im),(x2_re,x2_im))
+    }else{
+        let x1_re=(-coef.b)/(2*coef.a)
+        let x1_im=(-sqrt(delta))/(2*coef.a)
+        let x2_re=(-coef.b)/(2*coef.a)
+        let x2_im=(sqrt(delta))/(2*coef.a)
+        return((x1_re,x1_im),(x2_re,x2_im))
+    }
+}
+func tiparire(x1:(re:Float,im:Float),x2:(re:Float,im:Float)){
+    print("x1=\(x1.re)+\(x1.im)")
+    print("x2=\(x2.re)+\(x2.im)") 
+}
+
+var a,b,c:(Float,Float) //var a b c de tip float
+var coef=citeste()
+(x1,x1)=calculeaza(coef:coef)
+tiparire(x1:)
+
+
+
