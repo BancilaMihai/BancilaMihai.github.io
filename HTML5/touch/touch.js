@@ -27,9 +27,9 @@ function on_touch_start(e){
 }
 
 function on_touch_move(e){
-		for(var i = 0; i < e.changedTouches.length; i++){
+		for(var i = 0; i < e.changedTouches.length; i++)
 			var j = 0;
-			for(; j < last_pos_array.length; j++){
+			for(; j < last_pos_array.length; j++)
 				if(last_pos_array[j].id == e.changedTouches[i].identifier)
 					break;
 				
