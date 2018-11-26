@@ -27,7 +27,7 @@ function on_touch_move(e){
 		context.beginPath();
 		context.lineWidth = 20;
 		//calculam mijlocul cercului anterior
-		context.moveTo(last_pos.x - canvas_bounding_rect.left, last_pos.y - canvas_bounding_rect.top);
+		context.moveTo(canvas_bounding_rect.left, canvas_bounding_rect.top);
 		context.lineTo(e.changedTouches[i].pageX-canvas_bounding_rect.left,
 					e.changedTouches[i].pageY-canvas_bounding_rect.top);
 		context.stroke();
