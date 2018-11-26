@@ -1,4 +1,4 @@
-document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 2018.11.26.8";
+document.getElementById("id_bussiness_version").innerHTML = "Bussiness version: 2018.11.26.11";
 
 document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.11.26.8";
 var canvas = document.getElementById("id_canvas");
@@ -8,7 +8,6 @@ canvas.addEventListener("touchend", on_touch_end);//lista degetelor care s-au ri
 
 var canvas_bounding_rect = canvas.getBoundingClientRect();
 
-
 var last_pos_array = [];
 
 function on_touch_start(e)
@@ -16,16 +15,21 @@ function on_touch_start(e)
 	for (var i = 0; i < e.changedTouches.length; i++){
 		var context = canvas.getContext("2d");
 		context.beginPath();
+		
+		var last_pos = {x: e.changedTouches[i].pageX, 
+						y: e.changedTouches[i].pageY, 
+						id: e.changedTouches[i].identifier,
+						color: get_random_color()};
+		last_pos_array.push(last_pos);
+		
+		context.fillStyle = last_pos_array[last_pos_array - 1].color;
+		context.strokeStyle = last_pos_array[last_pos_array - 1].color;
+		
 		context.arc(e.changedTouches[i].pageX - canvas_bounding_rect.left,
 					e.changedTouches[i].pageY - canvas_bounding_rect.top,
 					10,
 					0, 2 * Math.PI);
 		context.stroke();
-		var last_pos = {x: e.changedTouches[i].pageX, 
-						y: e.changedTouches[i].pageY, 
-						id: e.changedTouches[i].identifier};
-
-		last_pos_array.push(last_pos);
 	}
 }
 function on_touch_move(e)
@@ -48,7 +52,10 @@ function on_touch_move(e)
 		context.stroke();
 		
 		context.beginPath();
-		context.lineWidth = 1;		
+		context.lineWidth = 1;
+		context.fillStyle = last_pos_array[j].color;
+		context.strokeStyle = last_pos_array[j].color;
+		
 		context.arc(e.changedTouches[i].pageX - canvas_bounding_rect.left,
 					e.changedTouches[i].pageY - canvas_bounding_rect.top,
 					10,
