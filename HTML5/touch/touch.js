@@ -6,7 +6,6 @@ canvas.addEventListener("touchend", on_touch_end);//lista degetelor care s-au ri
 
 var canvas_bounding_rect = canvas.getBoundingClientRect();
 
-
 var last_pos_array = [];
 
 function get_random_color(e){
@@ -14,6 +13,7 @@ function get_random_color(e){
 	var s = "#FFFFFF";
 	for(var i = 0;i < 6;i++)
 		s = s + litere[Math.floor(Math.random() * 16)]
+	return s;
 }
 function on_touch_start(e)
 {
@@ -35,14 +35,12 @@ function on_touch_start(e)
 					0, 2 * Math.PI);
 		context.fill();
 		context.stroke();
-
 	}
 }
 
 function on_touch_move(e)
 {
 	e.preventDefault();
-	
 	for (var i = 0; i < e.changedTouches.length; i++){
 		var j = 0;
 		for (; j < last_pos_array.length; j++)
@@ -75,7 +73,6 @@ function on_touch_move(e)
 		last_pos_array[j].x = e.changedTouches[i].pageX;
 		last_pos_array[j].y = e.changedTouches[i].pageY;		
 	}
-	
 }
 
 function on_touch_end(e)
@@ -88,5 +85,4 @@ function on_touch_end(e)
 			
 		last_pos_array.splice(j, 1);
 	}
-	
 }
