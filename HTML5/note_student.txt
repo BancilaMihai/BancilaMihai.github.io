@@ -131,8 +131,7 @@ switch test{
         let note_student = t_note_student()
         note_student["citire"] = 5 //se supraincarca []
         print(note_student["citire"])
-}
 
-var note_student = t_note_student()
-note_student.adauga("citire", 5)
-//note_student.tipareste_carnet()
+    //default: //pentru ca putem acoperi toate cazurile nu mai avem nevoie de aceste default
+    //    print("Invalid input")	
+}
