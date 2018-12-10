@@ -1,4 +1,4 @@
-document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.12.10.3";
+document.getElementById("id_logic_version").innerHTML = "Logic version: 2018.12.10.4";
 document.getElementById("id_speak").addEventListener ("click", on_speak);
 
 var speak = new webkitSpeechRecognition();
