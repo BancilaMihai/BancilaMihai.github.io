@@ -1,8 +1,8 @@
 document.getElementById("id_bussiness_version").innerHTML="Bussiness version: 2019.01.19.4";
 
 
-function rotunjire(which){
-return Math.round(which*100)/100
+function rotunjire(numar){
+return Math.round(numar*100)/100
 }
 
 function kgconvertor(){
