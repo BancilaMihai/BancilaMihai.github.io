@@ -7,5 +7,5 @@ return Math.round(numar*100)/100
 
 function on_device_orientation(e){
 	document.getElementById("id_beta").innerHTML = rotunjire(e.beta);
-	sleep(2000);
+	setTimeout(on_device_orientation(),2000);
 }
