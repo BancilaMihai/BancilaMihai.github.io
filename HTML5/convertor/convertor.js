@@ -1,4 +1,4 @@
-document.getElementById("id_bussiness_version").innerHTML="Bussiness version: 2019.01.19.2";
+document.getElementById("id_bussiness_version").innerHTML="Bussiness version: 2019.01.19.3";
 
 
 function roundit(which){
