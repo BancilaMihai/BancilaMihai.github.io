@@ -1,5 +1,5 @@
 var data_locala = new Date();
-  var zi = new Array(7);
+var zi = new Array(7);
   
   zi[1] = "Luni";
   zi[2] = "Marti";
@@ -9,7 +9,7 @@ var data_locala = new Date();
   zi[6] = "Sambata";
   zi[0] = "Duminica";
 
-  var data_c = zi[data_locala.getDay()];
+var data_c = zi[data_locala.getDay()];
 document.getElementById("id_data_curenta").innerHTML = data_c;
 
 function startOra() {
