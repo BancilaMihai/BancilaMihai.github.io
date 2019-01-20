@@ -14,26 +14,60 @@
 		
 		<p id="id_ora_curenta"></p>
 		
+<!--cod greutate-->
 		<h2> Conversie greutate:</h2>
-		
-		<p>
-		  <label>din kilograme</label>
-		  <input type="number" placeholder="Kilograme" oninput="dinKginGr(this.value)">
-		</p>
-		<p>in grame: <span id="rezultatGr"></span></p>
-		
-		<p>sau</p>
-		
-		<p>
-		  <label>din grame</label>
-		  <input type="number" placeholder="Grame" oninput="dinGrinKg(this.value)">
-		</p>
-		<p>in kilograme: <span id="rezultatKg"></span></p>
-		
+<TABLE cellSpacing=0 cellPadding=0 width=250 border=0>
+	<FORM name=kggr method="post">
+		<TBODY>
+			<TR>
+			  <TD>
+				<INPUT 
+				onblur=kgconvertor() value=1 name=kg> kg</TD>
+			</TR>
+			<TR>
+			  <TD>
+				
+				<INPUT 
+				onblur=grconvertor() value=1000 name=gr> gr</TD>
+			</TR>
+			<TR>
+			  <TD width="50%">
+				  <p align="center"><input type="button" value="Calculeaza" name="B3"></p>
+			  </TD>
+			</TR>
+		</TBODY>
+	</FORM>
+</TABLE>
+
+
+<!--cod distanta-->
+<h2> Conversie distanta:</h2>
+<TABLE cellSpacing=0 cellPadding=0 width=250 border=0>
+	<FORM name=cminch method="post">
+		<TBODY>
+			<TR>
+			  <TD>
+				<INPUT 
+				onblur=cmconvertor() value=1 name=cm> cm</TD>
+			</TR>
+			<TR>
+			  <TD>
+				
+				<INPUT 
+				onblur=inchconvertor() value=0.39370079 name=inch> inch</TD>
+			</TR>
+			<TR>
+			  <TD width="50%">
+				  <p align="center"><input type="button" value="Calculeaza" name="B3"></p>
+			  </TD>
+			</TR>
+		</TBODY>
+	</FORM>
+</TABLE>
+
 		<script src="data_curenta.js"></script>
 		
 		<script src="convertor.js"></script>
-
-
+		
 	</body>
 </html>

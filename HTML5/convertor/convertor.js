@@ -1,9 +1,32 @@
 document.getElementById("id_bussiness_version").innerHTML="Bussiness version: 2019.01.19.2";
 
-function dinKginGr(valoareKg) {
-  document.getElementById("rezultatGr").innerHTML=valoareKg*1000;
+
+function roundit(which){
+return Math.round(which*100)/100
 }
 
-function dinGrinKg(valoareGr) {
-  document.getElementById("rezultatKg").innerHTML=valoareGr/1000;
+function kgconvertor(){
+with (document.kggr){
+gr.value = roundit(kg.value*1000);
+}
+}
+
+function grconvertor(){
+with (document.kggr){
+kg.value = roundit(gr.value/1000);
+}
+}
+
+
+
+function cmconvertor(){
+with (document.cminch){
+inch.value = roundit(cm.value/2.54);
+}
+}
+
+function inchconvertor(){
+with (document.cminch){
+cm.value = roundit(inch.value*2.54);
+}
 }
