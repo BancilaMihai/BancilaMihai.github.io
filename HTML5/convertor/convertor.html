@@ -3,15 +3,37 @@
 <!-- BancilaMihai -->
 
 <html>
-	<body>
+	<body onload="startTime()">
 		<p>UI version: 2019.01.19.0</p>
+		
 		<p id="id_bussiness_version"></p>
-
-		<p>Data curenta este:</p>
+		
+		<h2>Data curenta este:</h2>
+		
+		<p id="id_data_curenta"></p>
+		
+		<p id="id_ora_curenta"></p>
+		
+		<h2> Conversie greutate:</h2>
+		
+		<p>
+		  <label>din kilograme</label>
+		  <input type="number" placeholder="Kilograme" oninput="dinKginGr(this.value)">
+		</p>
+		<p>in grame: <span id="rezultatGr"></span></p>
+		
+		<p>sau</p>
+		
+		<p>
+		  <label>din grame</label>
+		  <input type="number" placeholder="Grame" oninput="dinGrinKg(this.value)">
+		</p>
+		<p>in kilograme: <span id="rezultatKg"></span></p>
 		
 		<script src="data_curenta.js"></script>
 		
 		<script src="convertor.js"></script>
+
 
 	</body>
 </html>
