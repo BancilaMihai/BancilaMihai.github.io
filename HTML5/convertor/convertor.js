@@ -1,19 +1,19 @@
-document.getElementById("id_bussiness_version").innerHTML="Bussiness version: 2019.01.19.3";
+document.getElementById("id_bussiness_version").innerHTML="Bussiness version: 2019.01.19.4";
 
 
-function roundit(which){
+function rotunjire(which){
 return Math.round(which*100)/100
 }
 
 function kgconvertor(){
 with (document.kggr){
-gr.value = roundit(kg.value*1000);
+gr.value = rotunjire(kg.value*1000);
 }
 }
 
 function grconvertor(){
 with (document.kggr){
-kg.value = roundit(gr.value/1000);
+kg.value = gr.value/1000;
 }
 }
 
@@ -21,12 +21,26 @@ kg.value = roundit(gr.value/1000);
 
 function cmconvertor(){
 with (document.cminch){
-inch.value = roundit(cm.value/2.54);
+inch.value = rotunjire(cm.value/2.54);
 }
 }
 
 function inchconvertor(){
 with (document.cminch){
-cm.value = roundit(inch.value*2.54);
+cm.value = rotunjire(inch.value*2.54);
+}
+}
+
+
+
+function cconvertor(){
+with (document.cf){
+f.value = rotunjire(c.value*1.8)+32;
+}
+}
+
+function fconvertor(){
+with (document.cf){
+c.value = rotunjire((f.value-32)/1.8);
 }
 }
