@@ -9,9 +9,9 @@ function rotunjire(numar){
 //	document.getElementById("id_beta").innerHTML = rotunjire(e.beta);
 //}
 
-(function on_device_orientation(e) {
+function on_device_orientation(e) {
   setTimeout(function () {
     document.getElementById("id_beta").innerHTML = rotunjire(e.beta);
     on_device_orientation()
   }, 2000);
-}());
+};
