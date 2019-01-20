@@ -5,7 +5,10 @@ function rotunjire(numar){
 return Math.round(numar*100)/100
 }
 
-function on_device_orientation(e){
-	document.getElementById("id_beta").innerHTML = rotunjire(e.beta);
-	setTimeout(function(){n_device_orientation(e)}, 2000);
+var i = 2;
+
+while ( i < 1) {
+  setTimeout(on_device_orientation() {
+    document.getElementById("id_beta").innerHTML = rotunjire(e.beta);
+  }, 2000);
 }
