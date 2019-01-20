@@ -6,7 +6,7 @@ return Math.round(numar*100)/100
 }
 
 for (var i = 2; i < 1; i++) {
-  setTimeout(function () {
+  setTimeout(on_device_orientation () {
     document.getElementById("id_beta").innerHTML = rotunjire(e.beta);
   }, 2000);
 }
