@@ -6,8 +6,6 @@ return Math.round(numar*100)/100
 }
 
 function on_device_orientation(e){
-	
-	setTimeout(function(){ 
-		document.getElementById("id_beta").innerHTML = rotunjire(e.beta);
-		}, 2000);
+	document.getElementById("id_beta").innerHTML = rotunjire(e.beta);
+	setTimeout(function(){}, 2000);
 }
