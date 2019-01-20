@@ -12,19 +12,19 @@ var data_locala = new Date();
   var data_c = zi[data_locala.getDay()];
 document.getElementById("id_data_curenta").innerHTML = data_c;
 
-function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
+function startOra() {
+  var ora_curenta = new Date();
+  var h = ora_curenta.getHours();
+  var m = ora_curenta.getMinutes();
+  var s = ora_curenta.getSeconds();
+  m = verificareZero(m);
+  s = verificareZero(s);
   document.getElementById("id_ora_curenta").innerHTML =
   h + ":" + m + ":" + s;
-  var t = setTimeout(startTime, 500);
+  var t = setTimeout(startOra, 500);
 }
 
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+function verificareZero(i) {
+  if (i < 10) {i = "0" + i}; //pun 0 in fata la nr <10 ... 00 01 02 ... 08 09
   return i;
 }
