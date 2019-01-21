@@ -12,7 +12,8 @@ var zi = new Array(7);
 var data_c = zi[data_locala.getDay()];
 document.getElementById("id_data_curenta").innerHTML = data_c;
 
-function startOra() {
+function startOra() 
+{
   var ora_curenta = new Date();
   var h = ora_curenta.getHours();
   var m = ora_curenta.getMinutes();
@@ -24,7 +25,8 @@ function startOra() {
   var t = setTimeout(startOra, 500);
 }
 
-function verificareZero(i) {
+function verificareZero(i) 
+{
   if (i < 10) {i = "0" + i}; //pun 0 in fata la nr <10 ... 00 01 02 ... 08 09
   return i;
 }
