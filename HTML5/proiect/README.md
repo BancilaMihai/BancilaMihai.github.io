@@ -4,7 +4,7 @@ Autor: Bancila Mihai
 
 Continut: Javascript, HTML
 
-Design: MVC (modell, view, controller)
+Metoda: MVC (modell, view, controller)
 
 Fire de executie: workeri
 
@@ -28,4 +28,4 @@ https://stackoverflow.com/
 Pentru a va putea face o idee despre cum arata aplicatia exista un printscreen cu numele imagine.jpg sau puteti accesa:
 https://BancilaMihai.github.io/HTML5/proiect/index.html
 
- ![alt text](https://BancilaMihai.github.io/HTML5/proiect/imagine.jpg)
+ ![alt text](https://bancilamihai.github.io/HTML5/proiect/imagine.jpg)
